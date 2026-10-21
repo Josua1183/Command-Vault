@@ -1,0 +1,84 @@
+# =======================================
+# PyCharm / JetBrains IDE
+# =======================================
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# =======================================
+# Python & Bytecode
+# =======================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =======================================
+# Virtuelle Umgebungen (Virtual Environments)
+# =======================================
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# uv
+.uv/
+
+# =======================================
+# Secrets & Konfiguration (WICHTIG!)
+# =======================================
+.env
+.env.local
+.env.*.local
+*.secret
+secrets.json
+
+# =======================================
+# Lokale Datenbanken & Logs
+# =======================================
+*.sqlite3
+*.db
+*.log
+*.pid
+
+# =======================================
+# Qt / PySide & QML Caches
+# =======================================
+*.qmlc
+*.jsc
+.rcc/
+
+# =======================================
+# Flatpak Build-Ordner (für später)
+# =======================================
+.flatpak-builder/
+_build/
+*.flatpak
+
+# =======================================
+# Betriebssystem-Artefakte
+# =======================================
+.DS_Store
+Thumbs.db
+*~
+*.swp
