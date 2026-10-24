@@ -1,7 +1,26 @@
 [project]
 name = "command-vault"
 version = "0.1.0"
-requires-python = ">=3.13"
+description = "Moderne Desktop-App zum Speichern, Durchsuchen und Ausführen von Shell-Befehlen"
+readme = "README.md"
+requires-python = ">=3.14"
 dependencies = [
     "pyside6>=6.12.0",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

@@ -1,0 +1,317 @@
+/* Command Vault – QSS-Template. Die Farbplatzhalter werden aus styles/theme.py befüllt. */
+
+/* === Global === */
+QWidget {
+    color: ${text_primary};
+    font-size: 13px;
+}
+
+QMainWindow, QDialog {
+    background-color: ${bg_primary};
+}
+
+QLabel {
+    background: transparent;
+}
+
+QLabel#title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+QLabel#sectionTitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: ${text_secondary};
+}
+
+QLabel#muted {
+    color: ${text_muted};
+}
+
+QLabel[muted="true"] {
+    color: ${text_muted};
+    font-style: italic;
+}
+
+QLabel#emptyTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: ${text_muted};
+}
+
+QLabel#errorText {
+    color: ${error};
+    font-size: 12px;
+}
+
+QLabel#tag {
+    background-color: ${tag_bg};
+    color: ${tag_text};
+    border-radius: 9px;
+    padding: 2px 10px;
+    font-size: 11px;
+}
+
+QLabel#statusDot, QLabel#statusText {
+    color: ${text_muted};
+}
+
+QLabel#statusDot[status="success"], QLabel#statusText[status="success"] {
+    color: ${success};
+}
+
+QLabel#statusDot[status="error"], QLabel#statusText[status="error"] {
+    color: ${error};
+}
+
+QLabel#statusDot[status="running"], QLabel#statusText[status="running"] {
+    color: ${warning};
+}
+
+/* === Menü / Toolbar / Statusleiste === */
+QMenuBar {
+    background-color: ${bg_secondary};
+    border-bottom: 1px solid ${border};
+    padding: 2px;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: ${bg_hover};
+}
+
+QMenu {
+    background-color: ${bg_surface};
+    border: 1px solid ${border};
+    border-radius: 8px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 6px 24px 6px 12px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: ${accent};
+    color: ${text_on_accent};
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: ${border};
+    margin: 4px 8px;
+}
+
+QToolBar {
+    background-color: ${bg_secondary};
+    border: none;
+    border-bottom: 1px solid ${border};
+    padding: 6px 8px;
+    spacing: 6px;
+}
+
+QToolButton {
+    background: transparent;
+    color: ${text_secondary};
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+QToolButton:hover {
+    background-color: ${bg_hover};
+    color: ${text_primary};
+}
+
+QToolButton:pressed {
+    background-color: ${bg_selected};
+}
+
+QStatusBar {
+    background-color: ${bg_secondary};
+    border-top: 1px solid ${border};
+    color: ${text_muted};
+    font-size: 12px;
+}
+
+QStatusBar QLabel {
+    color: ${text_muted};
+}
+
+QToolTip {
+    background-color: ${bg_surface};
+    color: ${text_primary};
+    border: 1px solid ${border};
+    padding: 4px 8px;
+}
+
+/* === Buttons === */
+QPushButton {
+    background-color: ${accent};
+    color: ${text_on_accent};
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: ${accent_hover};
+}
+
+QPushButton:pressed {
+    background-color: ${accent_active};
+}
+
+QPushButton:disabled {
+    background-color: ${bg_tertiary};
+    color: ${text_muted};
+}
+
+QPushButton[variant="secondary"] {
+    background-color: ${bg_tertiary};
+    color: ${text_primary};
+}
+
+QPushButton[variant="secondary"]:hover {
+    background-color: ${bg_hover};
+}
+
+QPushButton[variant="danger"] {
+    background-color: ${error};
+    color: ${text_on_accent};
+}
+
+QPushButton[variant="danger"]:hover {
+    background-color: ${error_hover};
+}
+
+QPushButton[compact="true"] {
+    padding: 2px 10px;
+    font-size: 11px;
+}
+
+/* === Eingabefelder === */
+QLineEdit, QPlainTextEdit {
+    background-color: ${bg_input};
+    color: ${text_primary};
+    border: 1px solid ${border};
+    border-radius: 8px;
+    padding: 6px 10px;
+    selection-background-color: ${accent};
+    selection-color: ${text_on_accent};
+}
+
+QLineEdit:focus, QPlainTextEdit:focus {
+    border: 1px solid ${accent};
+}
+
+QLineEdit:disabled {
+    background-color: ${bg_tertiary};
+    color: ${text_muted};
+}
+
+QPlainTextEdit#code {
+    background-color: ${bg_code};
+    color: ${text_code};
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'DejaVu Sans Mono', monospace;
+    font-size: 12px;
+}
+
+QPlainTextEdit#output {
+    background-color: ${bg_code};
+    color: ${text_primary};
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'DejaVu Sans Mono', monospace;
+    font-size: 12px;
+}
+
+QCheckBox {
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid ${border};
+    border-radius: 4px;
+    background-color: ${bg_input};
+}
+
+QCheckBox::indicator:hover {
+    border-color: ${accent};
+}
+
+QCheckBox::indicator:checked {
+    background-color: ${accent};
+    border-color: ${accent};
+}
+
+/* === Liste === */
+QListView {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* === Scrollbars === */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background-color: ${bg_hover};
+    border-radius: 5px;
+    min-height: 24px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: ${text_muted};
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: ${bg_hover};
+    border-radius: 5px;
+    min-width: 24px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: ${text_muted};
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+    width: 0;
+    height: 0;
+}
+
+QScrollBar::add-page, QScrollBar::sub-page {
+    background: none;
+}
+
+/* === Splitter === */
+QSplitter::handle {
+    background-color: ${border};
+}
+
+QSplitter::handle:horizontal {
+    width: 1px;
+}
+
+/* === Dialoge === */
+QMessageBox QLabel {
+    color: ${text_primary};
+}
