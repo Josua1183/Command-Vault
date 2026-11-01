@@ -60,6 +60,7 @@ secrets.json
 *.db
 *.log
 *.pid
+logs/
 
 # =======================================
 # Qt / PySide & QML Caches

@@ -312,6 +312,7 @@ class MainWindow(QMainWindow):
         if editor.exec() != CommandEditor.DialogCode.Accepted:
             return
         saved = self._command_service.create(editor.get_command())
+        self._scheduler.on_command_changed()
         self._selected_id = saved.id
         self._refresh_list()
         self._refresh_categories()
@@ -326,6 +327,7 @@ class MainWindow(QMainWindow):
         if editor.exec() != CommandEditor.DialogCode.Accepted:
             return
         updated = self._command_service.update(editor.get_command())
+        self._scheduler.on_command_changed()
         self._refresh_list()
         self._refresh_categories()
         self._show_command(updated)
@@ -345,6 +347,7 @@ class MainWindow(QMainWindow):
         if reply != QMessageBox.StandardButton.Yes:
             return
         self._command_service.delete(cmd.id)
+        self._scheduler.on_command_deleted(cmd.id)
         self._selected_id = None
         self._command_list.clear_selection()
         self._command_detail.clear()
